@@ -5,6 +5,7 @@ import pyaudio
 import time
 import json
 import pyttsx
+import platform
 import os
 
 CLIENT_ACCESS_TOKEN = 'ae9ba44bfc784edfb047fa865c8e0a0c'
@@ -68,6 +69,8 @@ def main():
     stream.close()
     pyAud.terminate()
 
+    print platform.system()
+
 
     print("Wait for response...")
     response = request.getresponse()
@@ -80,8 +83,13 @@ def main():
 
     if stringResponse is not None and stringResponse != "":
         print(stringResponse)
-        engine.say(stringResponse)
-        engine.runAndWait()
+        if platform.system() == 'Darwin':
+            os.system("say " + '"' + stringResponse + '"')
+        else:
+            print 'Windows'
+
+        #engine.say(stringResponse)
+       # engine.runAndWait()
 
     main()
 
