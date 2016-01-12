@@ -76,24 +76,29 @@ def main():
 
         print("Wait for response...")
         response = request.getresponse()
-
         jsonString = (response.read()).decode('utf-8')
-        jsonResponse = json.loads(jsonString)
+        processResponse(jsonString)
+        
 
-        stringResponse = jsonResponse["result"]["fulfillment"]["speech"]
-        stringResponse = stringResponse.rstrip()
+def processResponse(jsonString):
+    jsonResponse = json.loads(jsonString)
 
-        print(stringResponse)
+    stringResponse = jsonResponse["result"]["fulfillment"]["speech"]
+    stringResponse = stringResponse.rstrip()
 
-        if stringResponse is not None and stringResponse != "":
-            if platform.system() == 'Darwin':
-                os.system("say " + '"' + stringResponse + '"')
-            else:
-                print 'Windows'
+    print(stringResponse)
 
+    if stringResponse is not None and stringResponse != "":
+        if platform.system() == 'Darwin':
+            os.system("say " + '"' + stringResponse + '"')
         else:
-            print(jsonString)
-            processRequest(jsonResponse["result"]["action"], jsonResponse["result"]["parameters"])
+            print 'Windows'
+
+    else:
+        print(jsonString)
+        parameters = jsonResponse["result"]["parameters"]
+        action = jsonResponse["result"]["action"]
+        responseHelper(action, parameters)
 
 
 def setupCampusEvents():
@@ -102,23 +107,45 @@ def setupCampusEvents():
     for component in gcal.walk():
         #if component.name == "VEVENT":
         print component.get('summary')
-        print component.get('dtstart')
+        #print component.get('dtstart')
         #print component.get('dtend')
         #print component.get('dtstamp')
     calendar.close()
 
+
 #Processes advanced requests that cannot
 #be handled on api.ai server
-def processRequest(action, parameters):
-
+def responseHelper(action, parameters):
     speechText = ''
     if action == "get_free_food":
         speechText = "Build18 is currently giving out free Chipotle in Hamerschlag Hall."
+        os.system("say " + '"' + speechText + '"')
+
     elif action == "get_events":
         nop
-
-    os.system("say " + '"' + speechText + '"')
-
+    elif action == "get_weather" or action == "weather.search":
+        ai = apiai.ApiAI(CLIENT_ACCESS_TOKEN, SUBSCRIPTION_KEY)
+        request = ai.text_request()
+        request.lang = 'en'
+        
+        if "date" in parameters:
+            date = parameters["date"]
+            date = date[:10]
+            request.query = "What's the weather in Pittsburgh, PA on " + date;
+        else: # Date was specified
+            request.query = "What's the weather in Pittsburgh, PA"
+        response = request.getresponse()
+        jsonString = (response.read()).decode('utf-8')
+        processResponse(jsonString)
+    elif action == "get_directions" and "buildings" in parameters:
+        building = parameters["buildings"]
+        print "Parameter: " + building
+        jsonData = open('directions.json').read()
+        print jsonData
+        buildingData = json.loads(jsonData)
+        speechText = buildingData[building]
+        print "Speech: " + speechText
+        os.system("say " + '"' + speechText + '"')
 
 
 if __name__ == '__main__':
