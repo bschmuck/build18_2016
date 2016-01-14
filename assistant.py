@@ -132,47 +132,6 @@ def main():
         request.lang = 'en'
         request.query = speechText
 
-       # def streamCallback(in_data, frame_count, time_info, status):
-        #    frames, data = resampler.resample(in_data, frame_count)
-         #   state = vad.processFrame(frames)
-          #  request.send(data)
-
-          #  if(state == 1):
-          #      return in_data, pyaudio.paContinue
-         #   else:
-         #       return in_data, pyaudio.paComplete
-
-       # pyAud = pyaudio.PyAudio()
-
-        #stream = pyAud.open(format = FORMAT,
-           #                 channels = CHANNELS,
-          #                  rate = RATE,
-          #                  input = True,
-          #                  output = False,
-          #                  frames_per_buffer = CHUNK,
-          #                  stream_callback = streamCallback
-         #                   )
-
-        #stream.start_stream()
-
-        #print("Yo man. Say something!")
-
-       # try:
-       #     while stream.is_active():
-        #        time.sleep(0.1)
-        #except Exception:
-            #raise e
-         #   pass
-       # except KeyboardInterrupt:
-        #    pass
-
-       # stream.stop_stream()
-        #stream.close()
-        #pyAud.terminate()
-
-        #print platform.system()
-
-
         print("Wait for response...")
         response = request.getresponse()
         jsonString = (response.read()).decode('utf-8')
@@ -225,11 +184,7 @@ def setupCampusEvents():
     calendar = open('cmu.ics','rb')
     gcal = icalendar.Calendar.from_ical(calendar.read())
     for component in gcal.walk():
-        #if component.name == "VEVENT":
         print component.get('summary')
-        #print component.get('dtstart')
-        #print component.get('dtend')
-        #print component.get('dtstamp')
     calendar.close()
 
 
@@ -324,6 +279,8 @@ def responseHelper(action, parameters):
 
         processTextToVoice(speechText)
 
+    elif action == "get_open_restaurants":
+        # BRANDON ADD YOUR CODE HERE
     else:
         processTextToVoice("Sorry, I did not understand.")
 
