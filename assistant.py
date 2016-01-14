@@ -8,15 +8,27 @@ import pyttsx
 import platform
 import os
 import icalendar
+import tweepy
 
 CLIENT_ACCESS_TOKEN = 'ae9ba44bfc784edfb047fa865c8e0a0c'
 SUBSCRIPTION_KEY = 'bb578bf5-b17b-4a22-bf0d-4aa2492e0401' 
+
+# Twitter user credentials
+ACCESS_TOKEN = '4797914969-ZNshVvSYGfhuBfdBNfKRlgVJOxjRi0XOaH6VQXu'
+ACCESS_SECRET = 'MsB3MahVJR5bVgZP96SpbRYiXCX0HO2jp9vivIJ6r5Vpk'
+CONSUMER_KEY = 'JK8l3Vfa2gljT7sTcyg3586iy'
+CONSUMER_SECRET = 'DQhmMv4FF6PHcJayZaLkbUzxRBMvzQ33y4Mm3t2PFWYiIMdbgK'
 
 RATE = 44100
 CHUNK = 512
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
 RECORD_SECONDS = 2
+
+#Set up Twitter posting
+auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET)
+api = tweepy.API(auth)
 
 def main():
 
@@ -26,7 +38,6 @@ def main():
         engine = pyttsx.init()
         engine.setProperty('rate', 200)
         voices = engine.setProperty('voice', 'com.apple.speech.synthesis.voice.Alex')
-
 
         resampler = apiai.Resampler(source_samplerate = RATE)
         vad = apiai.VAD()
@@ -83,6 +94,15 @@ def main():
 def processResponse(jsonString):
     jsonResponse = json.loads(jsonString)
 
+    userRequest = jsonResponse["result"]["resolvedQuery"]
+    status = "Client: " + userRequest
+    status = status[:139]
+
+    try:
+        api.update_status(status=status)
+    except:
+        print "Duplicate Tweet"
+
     stringResponse = jsonResponse["result"]["fulfillment"]["speech"]
     stringResponse = stringResponse.rstrip()
 
@@ -91,6 +111,14 @@ def processResponse(jsonString):
     if stringResponse is not None and stringResponse != "":
         if platform.system() == 'Darwin':
             os.system("say " + '"' + stringResponse + '"')
+            status = "Tank: " + stringResponse
+
+            status = status[:139]
+            try:
+                api.update_status(status=status)
+            except:
+                print "Duplicate Tweet"
+
         else:
             print 'Windows'
 
@@ -127,6 +155,14 @@ def responseHelper(action, parameters):
     if action == "get_free_food":
         speechText = "Build18 is currently giving out free Chipotle in Hamerschlag Hall."
         os.system("say " + '"' + speechText + '"')
+        status = "Tank: " + speechText
+
+        status = status[:139]
+        try:
+            api.update_status(status=status)
+        except:
+            print "Duplicate Tweet"
+
 
     elif action == "get_events":
         nop
@@ -153,6 +189,13 @@ def responseHelper(action, parameters):
         speechText = buildingData[building]
         print "Speech: " + speechText
         os.system("say " + '"' + speechText + '"')
+        status = "Tank: " + speechText
+
+        status = status[:139]
+        try:
+            api.update_status(status=status)
+        except:
+            print "Duplicate Tweet"
 
 
 if __name__ == '__main__':
