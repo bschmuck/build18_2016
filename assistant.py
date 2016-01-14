@@ -17,7 +17,7 @@ import speech_recognition as sr
 
 
 CLIENT_ACCESS_TOKEN = 'ae9ba44bfc784edfb047fa865c8e0a0c'
-SUBSCRIPTION_KEY = 'bb578bf5-b17b-4a22-bf0d-4aa2492e0401' 
+SUBSCRIPTION_KEY = 'bb578bf5-b17b-4a22-bf0d-4aa2492e0401'
 
 # Twitter user credentials
 ACCESS_TOKEN = '4797914969-ZNshVvSYGfhuBfdBNfKRlgVJOxjRi0XOaH6VQXu'
@@ -112,7 +112,7 @@ def main():
             print "Ready!"
 
             try:
-                audio = r.listen(source)  
+                audio = r.listen(source)
                 print "Checkpoint"
             except:
                 print "Try again"
@@ -122,12 +122,16 @@ def main():
             print("You said " + speechText)    # recognize speech using Google Speech Recognition
         except LookupError:                            # speech is unintelligible
             print("Could not understand audio")
+            continue
+        except sr.UnknownValueError:
+            print("Unintelligible speech.")
+            continue
         #request = ai.voice_request()
 
         request = ai.text_request()
         request.lang = 'en'
         request.query = speechText
-        
+
        # def streamCallback(in_data, frame_count, time_info, status):
         #    frames, data = resampler.resample(in_data, frame_count)
          #   state = vad.processFrame(frames)
@@ -173,7 +177,7 @@ def main():
         response = request.getresponse()
         jsonString = (response.read()).decode('utf-8')
         processResponse(jsonString)
-        
+
 
 def processResponse(jsonString):
     global isTalking
@@ -246,7 +250,7 @@ def responseHelper(action, parameters):
         ai = apiai.ApiAI(CLIENT_ACCESS_TOKEN, SUBSCRIPTION_KEY)
         request = ai.text_request()
         request.lang = 'en'
-        
+
         if "date" in parameters:
             date = parameters["date"]
             date = date[:10]
@@ -314,7 +318,7 @@ def responseHelper(action, parameters):
 
         if (int(day) < int(endDay)) or (int(currentHour) < int(endHour) and int(day) == int(endDay)) or (int(day) == int(endDay) and int(currentHour) == int(endHour) and int(currentMin) < int(endMin)):
             speechText = restaurantName + " is currently open. It will remain open until " + str(endHour) + ":" + str(endMin)
-        else: 
+        else:
             print "Days Equal: " + str((currentDay == endDay)) + "Hours LT: " + str((currentHour < endHour))
             speechText = restaurantName + " is currently closed. It will reopen at " + str(nextStartHour) + ":" + str(nextStartMin)
 
