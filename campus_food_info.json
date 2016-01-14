@@ -1,0 +1,5743 @@
+{
+
+   "locations": [
+
+      {
+
+         "name": "Asiana",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Newell Simon Hall Atrium",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 19,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 19,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 19,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 19,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 19,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 6,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 6,
+
+                  "hour": 19,
+
+                  "min": 30
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Carnegie Mellon Cafe",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Resnik Servery",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 0,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 2,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 7,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 2,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 7,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 2,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 7,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 2,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 7,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 2,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 7,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 6,
+
+                  "hour": 2,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 6,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 0,
+
+                  "hour": 2,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "El Gallo de Oro",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "University Center 1st Floor",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 0,
+
+                  "hour": 10,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 0,
+
+                  "hour": 22,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 10,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 22,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 10,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 22,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 10,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 22,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 10,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 22,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 10,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 22,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 6,
+
+                  "hour": 10,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 6,
+
+                  "hour": 22,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Entropy",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "University Center 1st Floor",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 0,
+
+                  "hour": 10,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 3,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 7,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 3,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 7,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 3,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 7,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 3,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 7,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 3,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 7,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 6,
+
+                  "hour": 1,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 6,
+
+                  "hour": 10,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 0,
+
+                  "hour": 1,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "The Exchange",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Posner Hall",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 20,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 20,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 20,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 20,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 18,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 6,
+
+                  "hour": 10,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 6,
+
+                  "hour": 14,
+
+                  "min": 30
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Gingers Express",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Baker Hall, Purnell ",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 16,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 16,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 16,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 16,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 16,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Heinz Café",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Heinz Institute",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 8,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 18,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 8,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 18,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 8,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 18,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 8,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 18,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 8,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 14,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "La Prima Espresso",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Wean Hall 4th Floor",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 18,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 18,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 18,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 18,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 16,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Maggie Murph Café",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Hunt Library",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 0,
+
+                  "hour": 12,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 6,
+
+                  "hour": 10,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 6,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "City Grill",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "University Center 2nd Floor",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Pasta Villaggio",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "University Center 2nd Floor",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Spinning Salads",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "University Center 2nd Floor",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Evgefstos",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "University Center 2nd Floor",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Rice Bowl",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "University Center 2nd Floor",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Creperie",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "University Center 2nd Floor",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 16,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 16,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 16,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 16,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 16,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Downtown Deli",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "University Center 2nd Floor",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 16,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 16,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 16,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 16,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 16,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Mitchell's Mainstreet",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Newell Simon Hall Atrium",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 18,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 18,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 18,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 18,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 15,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "El Burrito Grande",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Resnik Servery",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 14,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 14,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 14,
+
+                  "min": 30
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Global Flavour",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Resnik Servery",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 0,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 0,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 6,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 6,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Chef's Table",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Resnik Servery",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Nakama Express",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Resnik Servery",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 0,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 0,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 14,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 14,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 6,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 6,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Soup & Salad",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Resnik Servery",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 0,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 0,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 14,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 14,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 14,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 14,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 14,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 6,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 6,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Spice It Up Grill",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Resnik Servery",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 0,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 0,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 14,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 14,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 14,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 14,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 14,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 6,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 6,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Stir Crazy",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Resnik Servery",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 0,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 0,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 6,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 6,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Take Comfort",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Resnik Servery",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Taste of India",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Resnik Servery",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 0,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 0,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 14,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 14,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 14,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 14,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 14,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 6,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 6,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Breakfast Express",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Resnik Servery",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 0,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 0,
+
+                  "hour": 14,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 6,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 6,
+
+                  "hour": 14,
+
+                  "min": 30
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Schatz Dining Room",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "University Center 2nd Floor",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 0,
+
+                  "hour": 10,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 0,
+
+                  "hour": 14,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 7,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 10,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 11,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 7,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 10,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 11,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 7,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 10,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 11,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 7,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 10,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 11,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 20,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 7,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 10,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 11,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 6,
+
+                  "hour": 10,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 6,
+
+                  "hour": 14,
+
+                  "min": 30
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "SEIber Café",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Software Engineering Institute",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 7,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 15,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 7,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 15,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 7,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 15,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 7,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 15,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 7,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 15,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Stephanie's",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Mellon Institute",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 14,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 14,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 14,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 14,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 14,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Tartan Express",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Legacy Plaza (Between Resnik and UC)",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 19,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 19,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 19,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 19,
+
+                  "min": 30
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 16,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "The Pomegranate",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "University Center 2nd Floor",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 21,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 14,
+
+                  "min": 30
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Tartans Pizza",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Resnik Servery",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 0,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 0,
+
+                  "hour": 23,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 23,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 23,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 23,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 23,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 11,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 23,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 6,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 6,
+
+                  "hour": 23,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "Tazza D'Oro",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Gates Hillman Center 3rd Floor",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 7,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 19,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 7,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 19,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 7,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 19,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 7,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 19,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 7,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 19,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "The Underground",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "Morewood E-Tower",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 0,
+
+                  "hour": 8,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 0,
+
+                  "hour": 24,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 8,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 24,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 8,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 24,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 8,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 24,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 8,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 24,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 8,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 24,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 6,
+
+                  "hour": 8,
+
+                  "min": 30
+
+               },
+
+               "end": {
+
+                  "day": 6,
+
+                  "hour": 24,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "name": "The Zebra Lounge",
+
+         "description": "",
+
+         "keywords": [
+
+            ""
+
+         ],
+
+         "location": "College of Fine Arts",
+
+         "times": [
+
+            {
+
+               "start": {
+
+                  "day": 1,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 1,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 2,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 2,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 3,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 3,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 4,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 4,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               }
+
+            },
+
+            {
+
+               "start": {
+
+                  "day": 5,
+
+                  "hour": 8,
+
+                  "min": 0
+
+               },
+
+               "end": {
+
+                  "day": 5,
+
+                  "hour": 17,
+
+                  "min": 0
+
+               }
+
+            }
+
+         ]
+
+      }
+
+   ]
+
+}

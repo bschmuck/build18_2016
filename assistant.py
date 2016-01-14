@@ -12,6 +12,9 @@ import tweepy
 import thread
 from pykeyboard import PyKeyboard
 import time
+import datetime
+import speech_recognition as sr
+
 
 CLIENT_ACCESS_TOKEN = 'ae9ba44bfc784edfb047fa865c8e0a0c'
 SUBSCRIPTION_KEY = 'bb578bf5-b17b-4a22-bf0d-4aa2492e0401' 
@@ -34,6 +37,35 @@ auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET)
 api = tweepy.API(auth)
 
 isTalking = False
+
+campusFoodHours = {}
+
+
+
+def parseCampusFoodInfo():
+    jsonData = open('campus_food_info.json').read()
+    restaurantData = json.loads(jsonData)
+    locationArray = restaurantData["locations"]
+    for location in locationArray:
+        locationName = location["name"]
+        locationTimes = location["times"]
+        campusFoodHours[locationName] = locationTimes
+
+def processTextToVoice(text):
+    global isTalking
+
+    isTalking = True
+    os.system("say -v Samantha " + '"' + text + '"')
+    isTalking = False
+
+    status = "Tank: " + text
+
+    status = status[:139]
+    try:
+        api.update_status(status=status)
+    except:
+        print "Duplicate Tweet"
+
 
 def faceManager(threadName, delay):
     k = PyKeyboard()
@@ -58,6 +90,7 @@ def main():
     global isTalking
 
     setupCampusEvents()
+    parseCampusFoodInfo()
 
     try:
         thread.start_new_thread(faceManager, ("Thread-1", 2, ) )
@@ -65,54 +98,75 @@ def main():
         print "Could not start Thread"
 
     while True:
-        engine = pyttsx.init()
-        engine.setProperty('rate', 200)
-        voices = engine.setProperty('voice', 'com.apple.speech.synthesis.voice.Alex')
 
         resampler = apiai.Resampler(source_samplerate = RATE)
         vad = apiai.VAD()
         ai = apiai.ApiAI(CLIENT_ACCESS_TOKEN, SUBSCRIPTION_KEY)
-        request = ai.voice_request()
-        request.lang = 'en'
 
-        def streamCallback(in_data, frame_count, time_info, status):
-            frames, data = resampler.resample(in_data, frame_count)
-            state = vad.processFrame(frames)
-            request.send(data)
 
-            if(state == 1):
-                return in_data, pyaudio.paContinue
-            else:
-                return in_data, pyaudio.paComplete
+        r = sr.Recognizer()
+        speechText = ""
 
-        pyAud = pyaudio.PyAudio()
+        with sr.Microphone() as source:                # use the default microphone as the audio source
+            r.adjust_for_ambient_noise(source)         # listen for 1 second to calibrate the energy threshold for ambient noise levels
+            print "Ready!"
 
-        stream = pyAud.open(format = FORMAT,
-                            channels = CHANNELS,
-                            rate = RATE,
-                            input = True,
-                            output = False,
-                            frames_per_buffer = CHUNK,
-                            stream_callback = streamCallback
-                            )
-
-        stream.start_stream()
-
-        print("Yo man. Say something!")
+            try:
+                audio = r.listen(source)  
+                print "Checkpoint"
+            except:
+                print "Try again"
 
         try:
-            while stream.is_active():
-                time.sleep(0.1)
-        except Exception:
-            raise e
-        except KeyboardInterrupt:
-            pass
+            speechText = r.recognize_google(audio)
+            print("You said " + speechText)    # recognize speech using Google Speech Recognition
+        except LookupError:                            # speech is unintelligible
+            print("Could not understand audio")
+        #request = ai.voice_request()
 
-        stream.stop_stream()
-        stream.close()
-        pyAud.terminate()
+        request = ai.text_request()
+        request.lang = 'en'
+        request.query = speechText
+        
+       # def streamCallback(in_data, frame_count, time_info, status):
+        #    frames, data = resampler.resample(in_data, frame_count)
+         #   state = vad.processFrame(frames)
+          #  request.send(data)
 
-        print platform.system()
+          #  if(state == 1):
+          #      return in_data, pyaudio.paContinue
+         #   else:
+         #       return in_data, pyaudio.paComplete
+
+       # pyAud = pyaudio.PyAudio()
+
+        #stream = pyAud.open(format = FORMAT,
+           #                 channels = CHANNELS,
+          #                  rate = RATE,
+          #                  input = True,
+          #                  output = False,
+          #                  frames_per_buffer = CHUNK,
+          #                  stream_callback = streamCallback
+         #                   )
+
+        #stream.start_stream()
+
+        #print("Yo man. Say something!")
+
+       # try:
+       #     while stream.is_active():
+        #        time.sleep(0.1)
+        #except Exception:
+            #raise e
+         #   pass
+       # except KeyboardInterrupt:
+        #    pass
+
+       # stream.stop_stream()
+        #stream.close()
+        #pyAud.terminate()
+
+        #print platform.system()
 
 
         print("Wait for response...")
@@ -142,18 +196,7 @@ def processResponse(jsonString):
 
     if stringResponse is not None and stringResponse != "":
         if platform.system() == 'Darwin':
-
-            isTalking = True
-            os.system("say " + '"' + stringResponse + '"')
-            isTalking = False
-
-            status = "Tank: " + stringResponse
-
-            status = status[:139]
-            try:
-                api.update_status(status=status)
-            except:
-                print "Duplicate Tweet"
+            processTextToVoice(stringResponse)
 
         else:
             print 'Windows'
@@ -190,23 +233,12 @@ def setupCampusEvents():
 #be handled on api.ai server
 def responseHelper(action, parameters):
     global isTalking
+    global campusFoodHours
 
     speechText = ''
     if action == "get_free_food":
         speechText = "Build18 is currently giving out free Chipotle in Hamerschlag Hall."
-
-        isTalking = True
-        os.system("say " + '"' + speechText + '"')
-        isTalking = False
-
-        status = "Tank: " + speechText
-
-        status = status[:139]
-        try:
-            api.update_status(status=status)
-        except:
-            print "Duplicate Tweet"
-
+        processTextToVoice(speechText)
 
     elif action == "get_events":
         print "Not implemented"
@@ -224,6 +256,7 @@ def responseHelper(action, parameters):
         response = request.getresponse()
         jsonString = (response.read()).decode('utf-8')
         processResponse(jsonString)
+
     elif action == "get_directions" and "buildings" in parameters:
         building = parameters["buildings"]
         print "Parameter: " + building
@@ -232,18 +265,63 @@ def responseHelper(action, parameters):
         buildingData = json.loads(jsonData)
         speechText = buildingData[building]
         print "Speech: " + speechText
+        processTextToVoice(speechText)
 
-        isTalking = True
-        os.system("say " + '"' + speechText + '"')
-        isTalking = False
+    elif action == "get_restaurant_status" and "restaurants" in parameters:
+        day = datetime.datetime.today().weekday()
+        restaurantName = parameters["restaurants"]
+        restaurantTimes = campusFoodHours[restaurantName]
 
-        status = "Tank: " + speechText
+        print restaurantTimes
 
-        status = status[:139]
-        try:
-            api.update_status(status=status)
-        except:
-            print "Duplicate Tweet"
+        startHour = 0
+        startMin = 0
+        startDay = day
+
+        endHour = 0
+        endMin = 0
+        endDay = 0
+
+        nextStartHour = 0
+        nextStartMin = 0
+
+        didFindHours = False;
+
+        speechText = ""
+
+        for time in restaurantTimes:
+            if not didFindHours:
+                print "Time: " + str(time["start"]["day"]) + " Looking for: " + str(day)
+                if time["start"]["day"] == day and not didFindHours:
+                    startHour = time["start"]["hour"]
+                    startMin = time["start"]["min"]
+                    endHour = time["end"]["hour"]
+                    endMin = time["end"]["min"]
+                    endDay = time["end"]["day"]
+                    didFindHours = True
+                    print "Found Time"
+                elif didFindHours:
+                    nextStartHour = time["start"]["hour"]
+                    nextStartMin = time["start"]["min"]
+                    break
+
+        now = datetime.datetime.now()
+        currentHour = now.hour
+        currentMin = now.minute
+
+        print "Current Time: " + str(currentHour) + ":" + str(currentMin) + " Date:" + str(startDay)
+        print "End Time: " + str(endHour) + ":" + str(endMin) + " Date:" + str(endDay)
+
+        if (int(day) < int(endDay)) or (int(currentHour) < int(endHour) and int(day) == int(endDay)) or (int(day) == int(endDay) and int(currentHour) == int(endHour) and int(currentMin) < int(endMin)):
+            speechText = restaurantName + " is currently open. It will remain open until " + str(endHour) + ":" + str(endMin)
+        else: 
+            print "Days Equal: " + str((currentDay == endDay)) + "Hours LT: " + str((currentHour < endHour))
+            speechText = restaurantName + " is currently closed. It will reopen at " + str(nextStartHour) + ":" + str(nextStartMin)
+
+        processTextToVoice(speechText)
+
+    else:
+        processTextToVoice("Sorry, I did not understand.")
 
 
 if __name__ == '__main__':
