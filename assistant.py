@@ -96,8 +96,15 @@ def processResponse(jsonString):
 
     else:
         print(jsonString)
-        parameters = jsonResponse["result"]["parameters"]
-        action = jsonResponse["result"]["action"]
+
+        action = ""
+        parameters = ""
+        if "result" in jsonResponse:
+            result = jsonResponse["result"]
+            if "parameters" in result:
+                parameters = result["parameters"]
+            if "action" in result:
+                action = result["action"]
         responseHelper(action, parameters)
 
 
