@@ -9,6 +9,9 @@ import platform
 import os
 import icalendar
 import tweepy
+import thread
+from pykeyboard import PyKeyboard
+import time
 
 CLIENT_ACCESS_TOKEN = 'ae9ba44bfc784edfb047fa865c8e0a0c'
 SUBSCRIPTION_KEY = 'bb578bf5-b17b-4a22-bf0d-4aa2492e0401' 
@@ -30,9 +33,36 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET)
 api = tweepy.API(auth)
 
+isTalking = False
+
+def faceManager(threadName, delay):
+    k = PyKeyboard()
+
+    global isTalking
+    isPressing = False
+
+    while True:
+        if isTalking:
+            if not isPressing:
+                k.press_key('B')
+            isPressing = True
+        else:
+            if isPressing:
+                k.release_key('B')
+            isPressing = False
+        time.sleep(.1)
+
+
 def main():
 
+    global isTalking
+
     setupCampusEvents()
+
+    try:
+        thread.start_new_thread(faceManager, ("Thread-1", 2, ) )
+    except:
+        print "Could not start Thread"
 
     while True:
         engine = pyttsx.init()
@@ -92,6 +122,8 @@ def main():
         
 
 def processResponse(jsonString):
+    global isTalking
+
     jsonResponse = json.loads(jsonString)
 
     userRequest = jsonResponse["result"]["resolvedQuery"]
@@ -110,7 +142,11 @@ def processResponse(jsonString):
 
     if stringResponse is not None and stringResponse != "":
         if platform.system() == 'Darwin':
+
+            isTalking = True
             os.system("say " + '"' + stringResponse + '"')
+            isTalking = False
+
             status = "Tank: " + stringResponse
 
             status = status[:139]
@@ -137,6 +173,8 @@ def processResponse(jsonString):
 
 
 def setupCampusEvents():
+    global isTalking
+
     calendar = open('cmu.ics','rb')
     gcal = icalendar.Calendar.from_ical(calendar.read())
     for component in gcal.walk():
@@ -151,10 +189,16 @@ def setupCampusEvents():
 #Processes advanced requests that cannot
 #be handled on api.ai server
 def responseHelper(action, parameters):
+    global isTalking
+
     speechText = ''
     if action == "get_free_food":
         speechText = "Build18 is currently giving out free Chipotle in Hamerschlag Hall."
+
+        isTalking = True
         os.system("say " + '"' + speechText + '"')
+        isTalking = False
+
         status = "Tank: " + speechText
 
         status = status[:139]
@@ -165,7 +209,7 @@ def responseHelper(action, parameters):
 
 
     elif action == "get_events":
-        nop
+        print "Not implemented"
     elif action == "get_weather" or action == "weather.search":
         ai = apiai.ApiAI(CLIENT_ACCESS_TOKEN, SUBSCRIPTION_KEY)
         request = ai.text_request()
@@ -188,7 +232,11 @@ def responseHelper(action, parameters):
         buildingData = json.loads(jsonData)
         speechText = buildingData[building]
         print "Speech: " + speechText
+
+        isTalking = True
         os.system("say " + '"' + speechText + '"')
+        isTalking = False
+
         status = "Tank: " + speechText
 
         status = status[:139]
