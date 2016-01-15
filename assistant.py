@@ -163,12 +163,7 @@ def main():
     parseCampusFoodInfo()
 
     
-    # Face Tracker init
-    faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-    video_capture = cv2.VideoCapture(0)
-    centerX = 0;
-    centerNew = 0;
-    k = PyKeyboard()
+    
     
     try:
         thread.start_new_thread(faceManager, ("Thread-1", 2, ) )
@@ -179,32 +174,7 @@ def main():
         print "Could not start Thread"
 
     while True:
-        # Capture frame-by-frame
-        ret, frame = video_capture.read()
-        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        faces = faceCascade.detectMultiScale(gray,scaleFactor=1.1,minNeighbors=5,minSize=(150, 150),    )
-        
-        #Draw a rectangle around the face
-        if len(faces) >= 1:
-            (x,y,w,h) = faces[0]
-            cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
-            centerNew = x + w/2
-        if centerNew > centerX + 2:
-            print "left"
-            k.press_key('A')
-            time.sleep(1)
-            k.release_key('A')
-        if centerNew < centerX - 2:
-            print "right"
-            k.press_key('D')
-            time.sleep(1)
-            k.release_key('D')
-
-        centerX = centerNew
-
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
-
+       
         resampler = apiai.Resampler(source_samplerate = RATE)
         vad = apiai.VAD()
         ai = apiai.ApiAI(CLIENT_ACCESS_TOKEN, SUBSCRIPTION_KEY)
@@ -246,9 +216,7 @@ def main():
         jsonString = (response.read()).decode('utf-8')
         processResponse(jsonString)
     
-    # When everything is done, release the capture
-    video_capture.release()
-    cv2.destroyAllWindows()
+    
 
 #Processes the response from API.ai
 def processResponse(jsonString):

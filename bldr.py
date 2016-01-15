@@ -1,9 +1,12 @@
 import os
 import cv2
 import sys
+from pykeyboard import PyKeyboard
+import time
 
 
-def faceTracker(threadName, delay):
+def faceTracker():
+    k = PyKeyboard()
     faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
     video_capture = cv2.VideoCapture(0)
@@ -29,10 +32,16 @@ def faceTracker(threadName, delay):
             (x,y,w,h) = faces[0]
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
             centerNew = x + w/2
-            if centerNew > centerX + 10:
-                print('left')
             if centerNew < centerX - 10:
-                print('right')
+                #print "left"
+                k.press_key('A')
+                time.sleep(.2)
+                k.release_key('A')
+            if centerNew > centerX + 10:
+                #print "right"
+                k.press_key('D')
+                time.sleep(.2)
+                k.release_key('D')
             centerX = centerNew
     
 
@@ -47,10 +56,6 @@ def faceTracker(threadName, delay):
     cv2.destroyAllWindows()
 
 def main():
-    #faceTracker()
-    try:
-        thread.start_new_thread(faceTracker, ("Thread-1", 2, ))
-    except:
-        print "Face Track Error"
+    faceTracker()
 
 main()
