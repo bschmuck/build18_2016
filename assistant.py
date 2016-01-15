@@ -14,6 +14,10 @@ from pykeyboard import PyKeyboard
 import time
 import datetime
 import speech_recognition as sr
+import random
+import cv2
+import sys
+from multiprocessing import Process, Manager
 
 
 CLIENT_ACCESS_TOKEN = 'ae9ba44bfc784edfb047fa865c8e0a0c'
@@ -66,6 +70,45 @@ def processTextToVoice(text):
     except:
         print "Duplicate Tweet"
 
+def doRandom():
+    letters = ['Z','Y','W','N']
+    ind = random.randint(0, 3)
+    return letters[ind]
+
+def faceTracker():
+    print "Face Track running"
+    k = PyKeyboard()
+    
+    faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+    video_capture = cv2.VideoCapture(0)
+    centerX = 0;
+
+    while True:
+        # Capture frame-by-frame
+        ret, frame = video_capture.read()
+        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        faces = faceCascade.detectMultiScale(gray,scaleFactor=1.1,minNeighbors=5,minSize=(150, 150),    )
+        
+        #Draw a rectangle around the face
+        if len(faces) >= 1:
+            (x,y,w,h) = faces[0]
+            cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+            centerNew = x + w/2
+        if centerNew > centerX + 10:
+            print('left')
+            k.tap_key('Left')
+        if centerNew < centerX - 10:
+            print('right')
+            k.tap_key('Right')
+        centerX = centerNew
+    
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+               break
+
+    # When everything is done, release the capture
+    video_capture.release()
+    cv2.destroyAllWindows()
+
 
 def faceManager(threadName, delay):
     k = PyKeyboard()
@@ -74,15 +117,36 @@ def faceManager(threadName, delay):
     isPressing = False
 
     while True:
-        if isTalking:
-            if not isPressing:
-                k.press_key('B')
-            isPressing = True
-        else:
-            if isPressing:
-                k.release_key('B')
-            isPressing = False
-        time.sleep(.1)
+        for waitInd in range(235):
+            if waitInd == 2 and not isTalking:
+                # Do random action
+                newKey = doRandom()
+                k.press_key(newKey)
+                time.sleep(.1)
+                k.release_key(newKey)
+                k.press_key(newKey)
+                time.sleep(.1)
+                k.release_key(newKey)
+                time.sleep(3)
+                # start blinking again
+                k.press_key('K')
+                time.sleep(.1)
+                k.release_key('K')
+            if isTalking:
+                if not isPressing:
+                    k.press_key('B')
+                isPressing = True
+            else:
+                if isPressing:
+                    k.release_key('B')
+                    isPressing = False
+                    # start blinking again
+                    k.press_key('K')
+                    time.sleep(.1)
+                    k.release_key('K')
+            time.sleep(.1)
+
+
 
 
 def main():
@@ -91,13 +155,48 @@ def main():
 
     setupCampusEvents()
     parseCampusFoodInfo()
-
+    
+    # Face Tracker init
+    faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+    video_capture = cv2.VideoCapture(0)
+    centerX = 0;
+    centerNew = 0;
+    k = PyKeyboard()
+    
     try:
         thread.start_new_thread(faceManager, ("Thread-1", 2, ) )
+        #thread.start_new_thread(faceTracker,  )
+        #faceTracker()
+        
     except:
         print "Could not start Thread"
 
     while True:
+        # Capture frame-by-frame
+        ret, frame = video_capture.read()
+        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        faces = faceCascade.detectMultiScale(gray,scaleFactor=1.1,minNeighbors=5,minSize=(150, 150),    )
+        
+        #Draw a rectangle around the face
+        if len(faces) >= 1:
+            (x,y,w,h) = faces[0]
+            cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+            centerNew = x + w/2
+        if centerNew > centerX + 2:
+            print "left"
+            k.press_key('A')
+            time.sleep(1)
+            k.release_key('A')
+        if centerNew < centerX - 2:
+            print "right"
+            k.press_key('D')
+            time.sleep(1)
+            k.release_key('D')
+
+        centerX = centerNew
+
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
 
         resampler = apiai.Resampler(source_samplerate = RATE)
         vad = apiai.VAD()
@@ -136,6 +235,10 @@ def main():
         response = request.getresponse()
         jsonString = (response.read()).decode('utf-8')
         processResponse(jsonString)
+    
+    # When everything is done, release the capture
+    video_capture.release()
+    cv2.destroyAllWindows()
 
 
 def processResponse(jsonString):
@@ -274,12 +377,13 @@ def responseHelper(action, parameters):
         if (int(day) < int(endDay)) or (int(currentHour) < int(endHour) and int(day) == int(endDay)) or (int(day) == int(endDay) and int(currentHour) == int(endHour) and int(currentMin) < int(endMin)):
             speechText = restaurantName + " is currently open. It will remain open until " + str(endHour) + ":" + str(endMin)
         else:
-            print "Days Equal: " + str((currentDay == endDay)) + "Hours LT: " + str((currentHour < endHour))
+            #print "Days Equal: " + str((currentDay == endDay)) + "Hours LT: " + str((currentHour < endHour))
             speechText = restaurantName + " is currently closed. It will reopen at " + str(nextStartHour) + ":" + str(nextStartMin)
 
         processTextToVoice(speechText)
 
     elif action == "get_open_restaurants":
+        print("Not implemented yet. Delete this line.")
         # BRANDON ADD YOUR CODE HERE
     else:
         processTextToVoice("Sorry, I did not understand.")
