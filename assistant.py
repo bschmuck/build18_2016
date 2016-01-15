@@ -144,15 +144,14 @@ def main():
         print("Wait for response...")
         response = request.getresponse()
         jsonString = (response.read()).decode('utf-8')
-        textToSpeechResponse(jsonString)
+        processResponse(jsonString)
 
 #Processes the response from API.ai
-def textToSpeechResponse(jsonString):
+def processResponse(jsonString):
     global isTalking
 
     jsonResponse = json.loads(jsonString)
 
-    #Updates Twitter feed with client request 
     userRequest = jsonResponse["result"]["resolvedQuery"]
     status = "Client: " + userRequest
     status = status[:139]
@@ -161,21 +160,21 @@ def textToSpeechResponse(jsonString):
     except:
         print "Duplicate Tweet"
 
-    #Forms speech response from user
     stringResponse = jsonResponse["result"]["fulfillment"]["speech"]
     stringResponse = stringResponse.rstrip()
 
-    #print(stringResponse)
+    print(stringResponse)
 
-    #Checks to make sure Mac is running
     if stringResponse is not None and stringResponse != "":
         if platform.system() == 'Darwin':
             processTextToVoice(stringResponse)
 
         else:
-            print 'Error: OS not yet supported.'
+            print 'Windows'
 
-        #Formats parameters and additional info for processing queries
+    else:
+        print(jsonString)
+
         action = ""
         parameters = ""
         if "result" in jsonResponse:
@@ -184,10 +183,11 @@ def textToSpeechResponse(jsonString):
                 parameters = result["parameters"]
             if "action" in result:
                 action = result["action"]
-        processQuery(action, parameters)
+        responseHelper(action, parameters)
 
-#Processes campus event information
+
 def setupCampusEvents():
+    global isTalking
 
     calendar = open('cmu.ics','rb')
     gcal = icalendar.Calendar.from_ical(calendar.read())
@@ -198,54 +198,48 @@ def setupCampusEvents():
 
 #Processes advanced requests that cannot
 #be handled on api.ai server
-def processQuery(action, parameters):
+def responseHelper(action, parameters):
     global isTalking
     global campusFoodHours
 
     speechText = ''
-
-    #Free food
     if action == "get_free_food":
         speechText = "Build18 is currently giving out free Chipotle in Hamerschlag Hall."
         processTextToVoice(speechText)
 
-    #Event information
     elif action == "get_events":
         print "Not implemented"
-
-    #Weather information for Pittsburgh
     elif action == "get_weather" or action == "weather.search":
         ai = apiai.ApiAI(CLIENT_ACCESS_TOKEN, SUBSCRIPTION_KEY)
         request = ai.text_request()
         request.lang = 'en'
 
-        #Date is given
         if "date" in parameters:
             date = parameters["date"]
             date = date[:10]
             request.query = "What's the weather in Pittsburgh, PA on " + date;
-
-        #Get current weather
-        else: 
+        else: # Date was specified
             request.query = "What's the weather in Pittsburgh, PA"
-
         response = request.getresponse()
         jsonString = (response.read()).decode('utf-8')
-        textToSpeechResponse(jsonString)
+        processResponse(jsonString)
 
-    #Directions to campus buildings
     elif action == "get_directions" and "buildings" in parameters:
         building = parameters["buildings"]
+        print "Parameter: " + building
         jsonData = open('directions.json').read()
+        print jsonData
         buildingData = json.loads(jsonData)
         speechText = buildingData[building]
+        print "Speech: " + speechText
         processTextToVoice(speechText)
 
-    #Restaurant Open/Closed Status
     elif action == "get_restaurant_status" and "restaurants" in parameters:
         day = datetime.datetime.today().weekday()
         restaurantName = parameters["restaurants"]
         restaurantTimes = campusFoodHours[restaurantName]
+
+        print restaurantTimes
 
         startHour = 0
         startMin = 0
@@ -262,7 +256,6 @@ def processQuery(action, parameters):
 
         speechText = ""
 
-        #Find restaurant times for current day
         for time in restaurantTimes:
             if not didFindHours:
                 print "Time: " + str(time["start"]["day"]) + " Looking for: " + str(day)
@@ -274,8 +267,6 @@ def processQuery(action, parameters):
                     endDay = time["end"]["day"]
                     didFindHours = True
                     print "Found Time"
-
-                #Found restaurant times for day. Get times for next day for next opening time
                 elif didFindHours:
                     nextStartHour = time["start"]["hour"]
                     nextStartMin = time["start"]["min"]
@@ -285,13 +276,12 @@ def processQuery(action, parameters):
         currentHour = now.hour
         currentMin = now.minute
 
-        #print "Current Time: " + str(currentHour) + ":" + str(currentMin) + " Date:" + str(startDay)
-        #print "End Time: " + str(endHour) + ":" + str(endMin) + " Date:" + str(endDay)
+        print "Current Time: " + str(currentHour) + ":" + str(currentMin) + " Date:" + str(startDay)
+        print "End Time: " + str(endHour) + ":" + str(endMin) + " Date:" + str(endDay)
 
         endMinString = ''
         nextStartMinString = ''
 
-        #Replace 0 with O Clock for text to speech
         if endMin == 0:
             endMinString = "O Clock"
         else:
@@ -302,7 +292,6 @@ def processQuery(action, parameters):
         else:
             nextStartMinString = str(nextStartMin)
 
-        #Determine whether restaurant is closed or open
         if (int(day) < int(endDay)) or (int(currentHour) < int(endHour) and int(day) == int(endDay)) or (int(day) == int(endDay) and int(currentHour) == int(endHour) and int(currentMin) < int(endMin)):
             speechText = restaurantName + " is currently open. It will remain open until " + str(endHour) + " " + endMinString
         else:
@@ -311,12 +300,9 @@ def processQuery(action, parameters):
 
         processTextToVoice(speechText)
 
-    #Retrieves list of open restaurants
     elif action == "get_open_restaurants":
         day = datetime.datetime.today().weekday()
         openRestaurants = []
-
-        #Iterates through restaurants to determine if each is open
         for restaurant in campusFoodHours:
             restaurantTimes = campusFoodHours[restaurant]
             didFindHours = False
@@ -338,17 +324,16 @@ def processQuery(action, parameters):
             currentHour = now.hour
             currentMin = now.minute
 
-            #Determines if restaurant is open and adds to array
             if (int(day) < int(endDay)) or (int(currentHour) < int(endHour) and int(day) == int(endDay)) or (int(day) == int(endDay) and int(currentHour) == int(endHour) and int(currentMin) < int(endMin)):
                 openRestaurants.append(restaurant)
 
         openRestaurantsText = "The following restaurants are currently open: "
+        print openRestaurants
         for openRestaurant in openRestaurants:
             print "Open " + openRestaurant
             openRestaurantsText = openRestaurantsText + " " + openRestaurant.encode('utf-8')
         processTextToVoice(openRestaurantsText)
 
-    #User query not supported/understood
     else:
         processTextToVoice("Sorry, I did not understand.")
 
